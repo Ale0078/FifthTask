@@ -18,6 +18,18 @@
     <None Update="C:\Users\dytyu\.nuget\packages\nlog.schema\4.7.9\contentFiles\any\any\NLog.xsd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 
   <PropertyGroup>
