@@ -9,6 +9,6 @@
             ViewModel = viewMolde;
         }
 
-        public abstract void Display(string number);
+        public abstract void Display();
     }
 }
