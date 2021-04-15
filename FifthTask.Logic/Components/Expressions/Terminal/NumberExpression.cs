@@ -2,11 +2,11 @@
 
 namespace FifthTask.Logic.Components.Expressions.Terminal
 {
-    internal class NumberExpretion : IExpression
+    internal class NumberExpression : IExpression
     {
         public long IndexContextNumber { get; }
 
-        public NumberExpretion(long indexContextNumber) 
+        public NumberExpression(long indexContextNumber) 
         {
             IndexContextNumber = indexContextNumber;
         }
