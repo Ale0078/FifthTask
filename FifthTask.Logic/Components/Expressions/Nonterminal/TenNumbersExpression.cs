@@ -4,7 +4,7 @@ using FifthTask.Logic.Components.Expressions.Interfaces;
 
 namespace FifthTask.Logic.Components.Expressions.Nonterminal
 {
-    internal class TenNumbersExpression : IExpression
+    public class TenNumbersExpression : IExpression
     {
         private readonly Dictionary<string, string> _tenNumbers = new()
         {

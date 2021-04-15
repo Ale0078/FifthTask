@@ -16,7 +16,7 @@ namespace FifthTask.Logic.Components.Expressions.Nonterminal
             _thousandNumbersExpression = thousandNumbersExpression;
         }
 
-        public string Interpret(Context numberContext) => _number.Interpret(numberContext) switch
+        public string Interpret(Context numberContext) => _number.Interpret(numberContext) switch 
         {
             "0" or "00" or "000" => _thousandNumbersExpression.Interpret(numberContext),
             _ => $"{NonterminalExpressionHelper.GetHundredInerpret(_number.Interpret(numberContext))} {NUMBER_CLASS} " +

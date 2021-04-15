@@ -2,7 +2,7 @@
 
 namespace FifthTask.Logic.Components.Expressions.Nonterminal
 {
-    internal class OneNumbersExpression : IExpression
+    public class OneNumbersExpression : IExpression
     {
         private readonly IExpression _number;
 
