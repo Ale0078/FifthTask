@@ -3,7 +3,7 @@ using FifthTask.Logic.Components.Expressions.Interfaces;
 
 namespace FifthTask.Models
 {
-    public class ViewModel : Model
+    public class NumberViewModel : Model
     {
         public override void SetExpression(IExpression numberConvector)
         {

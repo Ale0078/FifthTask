@@ -1,4 +1,6 @@
-﻿namespace FifthTask.Logic.UserInterface.Abstracts
+﻿using FifthTask.Logic.Components;
+
+namespace FifthTask.Logic.UserInterface.Abstracts
 {
     public abstract class View
     {
@@ -9,6 +11,6 @@
             ViewModel = viewMolde;
         }
 
-        public abstract void Display();
+        public abstract void Display(Context numberContext);
     }
 }
