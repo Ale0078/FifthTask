@@ -1,8 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.9" />
+    <PackageReference Include="NLog.Config" Version="4.7.9" />
+    <PackageReference Include="NLog.Schema" Version="4.7.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FifthTask.Logic\FifthTask.Logic.csproj" />
     <ProjectReference Include="..\..\MyLibToTasks\LibToTasks\LibToTasks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\dytyu\.nuget\packages\nlog.config\4.7.9\contentFiles\any\any\NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="C:\Users\dytyu\.nuget\packages\nlog.schema\4.7.9\contentFiles\any\any\NLog.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <PropertyGroup>
