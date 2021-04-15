@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Components\Expressions\Helpers\" />
-    <Folder Include="Components\Expressions\Nonterminal\" />
     <Folder Include="UserInterface\" />
   </ItemGroup>
 
