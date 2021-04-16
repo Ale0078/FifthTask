@@ -1,5 +1,8 @@
 ﻿using System;
 
+using FifthTask.Controllers;
+using FifthTask.Views;
+using FifthTask.Models;
 using FifthTask.Logic.Components;
 using FifthTask.Logic.Components.Expressions.Interfaces;
 using FifthTask.Logic.Components.Expressions.Nonterminal;
@@ -20,3 +23,7 @@ IExpression expression = new MillionNumbersExpression(number1,
     oneNumberExpression: new OneNumbersExpression(number5)))));
 
 Console.WriteLine(expression.Interpret(context));
+
+NumberController n = new NumberController(new NumberView(new NumberViewModel()));
+n.SetModel("90910409");
+n.Display();
