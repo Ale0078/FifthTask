@@ -11,8 +11,13 @@ namespace FifthTask.Logic.Components.Expressions.Nonterminal
             _number = number;
         }
 
-        public string Interpret(Context context) 
+        public string Interpret(Context context)
         {
+            if (_number.Interpret(context) == "0") 
+            {
+                return "";
+            }
+
             return context.DictionaryNumbers[_number.Interpret(context)];
         }
     }
