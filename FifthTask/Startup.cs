@@ -6,6 +6,7 @@ using static System.Console;
 using FifthTask.Controllers;
 using FifthTask.Models;
 using FifthTask.Views;
+using FifthTask.Messages;
 using FifthTask.Logic.UserInterface.Abstracts;
 using LibToTasks.Builders;
 using LibToTasks.Validation.Interfaces;
@@ -57,7 +58,7 @@ namespace FifthTask
             {
                 WriteLine(ZERO);
 
-                _logger.Info("Program is finalized");
+                _logger.Info(LogMessage.FINALIZED);
 
                 return;
             }
@@ -70,7 +71,7 @@ namespace FifthTask
 
             numberController.Display();
 
-            _logger.Info("Program is finalized");
+            _logger.Info(LogMessage.FINALIZED);
         }
 
         private bool CheckingValue(string valueToCheck) 
@@ -88,10 +89,10 @@ namespace FifthTask
 
         private void GetMessage() 
         {
-            WriteLine("You must enter only one number from 999999999 to 000000000");
+            WriteLine(UserMessage.VALUE_OF_NUMBER);
 
-            _logger.Error("You must enter only one number number from 999999999 to 000000000");
-            _logger.Info("Program is finalized");
+            _logger.Error(UserMessage.VALUE_OF_NUMBER);
+            _logger.Info(LogMessage.FINALIZED);
         }
     }
 }

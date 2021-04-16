@@ -2,6 +2,7 @@
 using System.Text;
 using NLog;
 
+using FifthTask.Messages;
 using FifthTask.Logic.Components;
 using FifthTask.Logic.UserInterface.Abstracts;
 using FifthTask.Logic.Components.Expressions.Interfaces;
@@ -24,14 +25,14 @@ namespace FifthTask.Controllers
         {
             ViewToDisplay.Display(_expressionContext);
 
-            _logger.Info("Coverted number was outputted");
+            _logger.Info(LogMessage.DISPLAY);
         }
 
         public override void SetModel(string numberToConvert)
         {
             _expressionContext = new Context(SetNumbersToConext(numberToConvert));
 
-            _logger.Info("Context was setted");
+            _logger.Info(LogMessage.SET_MODEL_CONTEXT);
 
             IExpression[] numbersToExpression = new IExpression[_expressionContext.Numbers.Length];
 
@@ -42,7 +43,7 @@ namespace FifthTask.Controllers
 
             ViewToDisplay.ViewModel.SetExpression(CreateExpression(numbersToExpression.Length, numbersToExpression));
 
-            _logger.Info("Model was setted");
+            _logger.Info(LogMessage.SET_MODEL_MODEL);
         }
 
         private IExpression CreateExpression(int digitCapacity, IExpression[] numbersToExpression) => digitCapacity switch
@@ -62,7 +63,7 @@ namespace FifthTask.Controllers
                     hundredNumberExpression: new HundredNumbersExpression(numbersToExpression[2],
                     tenNumberExpression: new TenNumbersExpression(numbersToExpression[3],
                     oneNumberExpression: new OneNumbersExpression(numbersToExpression[4]))))),
-            _ => throw new FormatException("You must enter a number from 999999999 to 000000000")
+            _ => throw new FormatException(UserMessage.VALUE_OF_NUMBER)
         };
 
     private string[] SetNumbersToConext(string numberToConvert) 
