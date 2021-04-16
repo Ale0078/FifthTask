@@ -62,18 +62,28 @@ namespace FifthTask.Controllers
                     hundredNumberExpression: new HundredNumbersExpression(numbersToExpression[2],
                     tenNumberExpression: new TenNumbersExpression(numbersToExpression[3],
                     oneNumberExpression: new OneNumbersExpression(numbersToExpression[4]))))),
-            _ => throw new FormatException("You must enter a number from 999999999 to 0")
+            _ => throw new FormatException("You must enter a number from 999999999 to 000000000")
         };
 
     private string[] SetNumbersToConext(string numberToConvert) 
         {
             StringBuilder builder = new();
 
-            string[] numbersToContext = new string[(int)Math.Ceiling(numberToConvert.Length / 3.0) + 2];
+            string[] numbersToContext = numberToConvert.Length switch
+            {
+                1 => new string[(int)Math.Ceiling(numberToConvert.Length / 3.0)],
+                2 => new string[(int)Math.Ceiling(numberToConvert.Length / 3.0) + 1],
+                _ => new string[(int)Math.Ceiling(numberToConvert.Length / 3.0) + 2]
+            };
 
-            for (int i = 1; i < 4; i++)
+            for (int i = 1; i <= 3; i++)
             {
                 numbersToContext[^i] = Convert.ToString(numberToConvert[^i]);
+
+                if (i == numbersToContext.Length) 
+                {
+                    break;
+                }
             }
 
             int j = 4;

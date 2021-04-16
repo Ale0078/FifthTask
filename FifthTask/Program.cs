@@ -25,5 +25,5 @@ IExpression expression = new MillionNumbersExpression(number1,
 Console.WriteLine(expression.Interpret(context));
 
 NumberController n = new NumberController(new NumberView(new NumberViewModel()));
-n.SetModel("90910409");
+n.SetModel("9990");
 n.Display();
