@@ -1,0 +1,5 @@
+2021-04-16 02:25:49.3120 | INFO | LibToTasks.Validation.Validator | Value 100 passed checking
+2021-04-16 02:25:49.3120 | INFO | FifthTask.Controllers.NumberController | Context was setted
+2021-04-16 02:25:49.3120 | INFO | FifthTask.Controllers.NumberController | Model was setted
+2021-04-16 02:25:49.3120 | INFO | FifthTask.Controllers.NumberController | Coverted number was outputted
+2021-04-16 02:25:49.3120 | INFO | FifthTask.Startup | Program is finalized
