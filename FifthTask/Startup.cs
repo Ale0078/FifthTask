@@ -13,7 +13,8 @@ using LibToTasks.Validation.Interfaces;
 namespace FifthTask
 {
     public class Startup
-    {        
+    {
+        private const string ZERO = "zero";
         private const int MAX_RANGE = 999999999;
         private const int MIN_RANGE = 000000000;
 
@@ -54,7 +55,7 @@ namespace FifthTask
 
             if (int.Parse(args[0]) == 0) 
             {
-                WriteLine(MIN_RANGE);
+                WriteLine(ZERO);
 
                 _logger.Info("Program is finalized");
 
