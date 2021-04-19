@@ -1,0 +1,4 @@
+2021-04-19 10:49:10.9862 | INFO | FifthTask.Controllers.NumberController | Context was setted
+2021-04-19 10:49:10.9862 | INFO | FifthTask.Controllers.NumberController | Model was setted
+2021-04-19 10:49:10.9862 | INFO | FifthTask.Controllers.NumberController | Coverted number was outputted
+2021-04-19 10:49:10.9862 | INFO | FifthTask.Startup | Program is finalized

@@ -4,7 +4,6 @@ using NLog;
 using static System.Console;
 
 using FifthTask.Controllers;
-//using FifthTask.Models;
 using FifthTask.Views;
 using FifthTask.Messages;
 using FifthTask.Logic.UserInterface.Abstracts;
