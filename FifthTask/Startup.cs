@@ -4,7 +4,7 @@ using NLog;
 using static System.Console;
 
 using FifthTask.Controllers;
-using FifthTask.Models;
+//using FifthTask.Models;
 using FifthTask.Views;
 using FifthTask.Messages;
 using FifthTask.Logic.UserInterface.Abstracts;
@@ -64,8 +64,7 @@ namespace FifthTask
             }
 
             Controller numberController = new NumberController(
-                numberView: new NumberView(
-                    viewModel: new NumberViewModel()));
+                numberView: new NumberView());
 
             numberController.SetModel(args[0]);
 

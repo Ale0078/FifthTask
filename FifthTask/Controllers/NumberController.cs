@@ -41,7 +41,7 @@ namespace FifthTask.Controllers
                 numbersToExpression[i] = new NumberExpression(i);
             }
 
-            ViewToDisplay.ViewModel.SetExpression(CreateExpression(numbersToExpression.Length, numbersToExpression));
+            ViewToDisplay.ViewModel = CreateExpression(numbersToExpression.Length, numbersToExpression);
 
             _logger.Info(LogMessage.SET_MODEL_MODEL);
         }
@@ -66,7 +66,7 @@ namespace FifthTask.Controllers
             _ => throw new FormatException(UserMessage.VALUE_OF_NUMBER)
         };
 
-    private string[] SetNumbersToConext(string numberToConvert) 
+        private string[] SetNumbersToConext(string numberToConvert) 
         {
             StringBuilder builder = new();
 

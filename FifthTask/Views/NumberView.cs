@@ -7,13 +7,9 @@ namespace FifthTask.Views
 {
     public class NumberView : View
     {
-        public NumberView(Model viewModel) : base(viewModel) 
-        {
-        }
-
         public override void Display(Context numberContext)
         {
-            WriteLine(ViewModel.NumberConvector.Interpret(numberContext));
+            WriteLine(ViewModel.Interpret(numberContext));
         }
     }
 }
